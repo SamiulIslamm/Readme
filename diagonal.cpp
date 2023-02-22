@@ -1,9 +1,8 @@
-// Transpose_Matrix
 #include<iostream>
 using namespace std;
 int main()
 {
-    int A[10][10], B[10][10],i,j,Row,Col;
+    int A[10][10], i,j,Row,Col,sum = 0;
 
     cout<<"Enter the number of Row :\n";
     cin>>Row;
@@ -33,21 +32,18 @@ int main()
            // cin>>A[i][j];
         }
         cout<<"\n";
-        
-    }
+     }
 
-    cout<<"Tronspose Matrix Values :\n";
-    cout<<"----------------\n";
 
-     for( j = 0; j < Col; j++){
-        for (i=0; i<Row; i++)
-        {
-            cout<<" "<<A[ i ][ j ];
-           // cin>>A[i][j];
+     for(i=0; i<Row; i++){
+        for(j=0; j<Col; j++){
+            if(i==j){
+                sum = sum + A[i][j];
+            }
         }
-        cout<<"\n";
-        
-    }
-    
+     }
 
+     cout<<"Total sum is = " <<sum;
+     return 0;
+        
 }
